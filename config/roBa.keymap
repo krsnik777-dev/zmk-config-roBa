@@ -15,6 +15,7 @@
 &trackball {
     automouse-layer = <2>;
     scroll-layers = <3>;
+    zephyr,scale = <2.0>;
 
     // arrows {
     //     layers = <3>;
