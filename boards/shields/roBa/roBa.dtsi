@@ -117,15 +117,11 @@
         status = "disabled";
     };
 };
-
 &spi0 {
-    status = "okay";
+    status = "disabled";
 
-    trackball: pmw3610@0 {
-        compatible = "pixart,pmw3610";
+    trackball: trackball@0 {
+        status = "disabled";
         reg = <0>;
-        label = "PMW3610";
-        zephyr,scale = <2.0>; // ← スクロール量アップ！
-        status = "okay";
     };
 };
