@@ -69,24 +69,31 @@
         };
     };
 
-    behaviors {
-        // lt_to_layer_0: lt_to_layer_0 {
-        //     compatible = "zmk,behavior-hold-tap";
-        //     label = "LAYER_TAP_TO_0";
-        //     bindings = <&mo>, <&to_layer_0>;
-        //     #binding-cells = <2>;
-        //     tapping-term-ms = <200>;
-        // };
+behaviors {
+    // lt_to_layer_0: lt_to_layer_0 {
+    //     compatible = "zmk,behavior-hold-tap";
+    //     label = "LAYER_TAP_TO_0";
+    //     bindings = <&mo>, <&to_layer_0>;
+    //     #binding-cells = <2>;
+    //     tapping-term-ms = <200>;
+    // };
 
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
-            tap-ms = <20>;
-        };
+    encoder_msc_down_up: encoder_msc_down_up {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "ENCODER_MSC_DOWN_UP";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        tap-ms = <20>;
     };
+
+    scroll_fast: scroll_fast {
+        compatible = "zmk,behavior-sensor-rotate";
+        label = "SCROLL_FAST";
+        #sensor-binding-cells = <0>;
+        bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        tap-ms = <5>; // ← スクロールを速くしたいならこの値を小さく！
+    };
+};
 
     keymap {
         compatible = "zmk,keymap";
@@ -127,6 +134,7 @@
 &trans                  &trans                   &trans     &kp LG(V)  &trans  &trans      &kp F24  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans                  &trans                   &trans     &trans     &trans  &trans      &trans   &trans                                                  &bt BT_CLR_ALL
             >;
+            sensor-bindings = <&scroll_fast>;
         };
     };
 };
