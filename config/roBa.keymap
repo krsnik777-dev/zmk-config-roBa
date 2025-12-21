@@ -118,8 +118,6 @@
 &trans                &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &kp F24  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
 &trans                &trans                   &trans          &trans           &trans         &trans      &trans   &trans                                                          &trans
             >;
-
-            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         winGUI {
