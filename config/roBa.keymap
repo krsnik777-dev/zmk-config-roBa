@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 //スクロール量変更の定義を追記
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
@@ -68,23 +68,25 @@
         };
     };
 
-behaviors {
-    lt_to_layer_0: lt_to_layer_0 {
-        compatible = "zmk,behavior-hold-tap";
-        label = "LAYER_TAP_TO_0";
-        bindings = <&mo>, <&to_layer_0>;
-        #binding-cells = <2>;
-        tapping-term-ms = <200>;
-    };
+    behaviors {
+        lt_to_layer_0: lt_to_layer_0 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_TAP_TO_0";
+            bindings = <&mo>, <&to_layer_0>;
 
-    encoder_msc_down_up: encoder_msc_down_up {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "ENCODER_MSC_DOWN_UP";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <20>;
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
     };
-};
 
     keymap {
         compatible = "zmk,keymap";
@@ -97,15 +99,15 @@ behaviors {
 &kp TAB           &trans  &kp ESC  &kp LEFT_ALT  &lt 2 SPACE  &kp LCTRL           &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
-                    sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         NUM {
             bindings = <
-&kp SLASH             &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                                   &kp DOLLAR     &kp QMARK      &kp EXCL   &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp NUMBER_0          &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp LS(EQUAL)  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp AMPERSAND  &kp RS(GRAVE)  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LEFT_SHIFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS      &kp EQUAL                    &trans          &kp AT_SIGN    &kp BACKSLASH  &kp UNDER  &kp LESS_THAN         &kp GT
-&trans                &trans        &trans        &trans        &trans         &trans                       &trans          &trans                                                         &kp PIPE
+&kp SLASH        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp EQUAL                                                  &kp DOLLAR     &kp QMARK      &kp EXCL   &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS   &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp AMPERSAND  &kp LS(EQUAL)  &kp MINUS  &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
+&kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MINUS  &kp EQUAL                    &trans          &kp AT_SIGN    &kp BACKSLASH  &kp UNDER  &kp LESS_THAN      &kp GT
+&trans           &trans        &trans        &trans        &trans        &trans                       &trans          &trans                                                      &kp PIPE
             >;
         };
 
