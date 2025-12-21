@@ -4,8 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 //スクロール量変更の定義を追記
-
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+//#define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
     flavor = "balanced";
