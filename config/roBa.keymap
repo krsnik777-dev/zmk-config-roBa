@@ -113,19 +113,19 @@
 
         FUNCTION {
             bindings = <
-&kp F1                  &kp F2                   &kp F3          &kp F4           &kp F5                              &kp F6         &kp F7          &kp F8          &kp F9           &kp F10
-&kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp UP_ARROW    &kp ENTER        &kp DEL        &trans      &kp F13  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB3
-&trans                  &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &kp F24  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
-&trans                  &trans                   &trans          &trans           &trans         &trans      &trans   &trans                                                          &trans
+&kp F1                  &kp F2                   &kp F3          &kp F4           &kp F5                             &kp F6         &kp F7          &kp F8          &kp F9           &kp F10
+&kp LS(LG(LEFT_ARROW))  &kp LS(LG(RIGHT_ARROW))  &kp UP_ARROW    &kp ENTER        &kp DEL        &trans      &trans  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB3
+&trans                  &kp LEFT_ARROW           &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &trans  &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans
+&trans                  &trans                   &trans          &trans           &trans         &trans      &trans  &trans                                                          &trans
             >;
         };
 
         winGUI {
             bindings = <
-&trans  &trans         &kp LG(E)     &kp LG(R)         &trans                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &kp LG(LS(S))  &kp LG(D)     &trans            &trans  &trans      &trans   &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1   &kp NUMBER_2  &kp LG(NUMBER_3)  &trans  &trans      &kp F24  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans         &trans        &trans            &trans  &trans      &trans   &trans                                                  &bt BT_CLR_ALL
+&trans  &trans         &kp LG(E)  &kp LG(R)  &trans                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &kp LG(LS(S))  &kp LG(D)  &trans     &trans  &trans      &trans   &trans        &trans        &trans        &trans        &trans
+&trans  &trans         &trans     &kp LG(V)  &trans  &trans      &kp F24  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans         &trans     &trans     &trans  &trans      &trans   &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
