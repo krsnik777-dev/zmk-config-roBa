@@ -59,14 +59,9 @@
             , <&key_physical_attrs 100 100  325  337       0     0     0>
             , <&key_physical_attrs 100 100  437  350    1000   437   350>
             , <&key_physical_attrs 100 100  550  387    2000   550   387>
-
-
-
-            , <&key_physical_attrs 100 100  650  387 (-2000)   650   387>
-            , <&key_physical_attrs 100 100  763  350 (-1000)     0   350>
-
+            , <&key_physical_attrs 100 100  650  387   -2000   650   387>
+            , <&key_physical_attrs 100 100  763  350   -1000     0   350>
             , <&key_physical_attrs 100 100 1200  337       0     0     0>
-
             ;
     };
 
@@ -86,12 +81,10 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
-            row-gpios
-                = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                ;
+        row-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                  , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
     left_encoder: encoder_left {
@@ -114,19 +107,19 @@
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "disabled";
+        status = "okay"; // ← 有効化！
     };
 };
 
 &spi0 {
-    status = "okay"; // ← SPIバス有効化
+    status = "okay";
 
     trackball: pmw3610@0 {
         compatible = "pixart,pmw3610";
         reg = <0>;
         label = "PMW3610";
-        zephyr,scale = <1.0>; // DPIそのままにしたいなら1.0
+        zephyr,scale = <1.0>;
         status = "okay";
-        // irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>; 必要なら追加
+        // irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>; // 必要なら有効化
     };
 };
