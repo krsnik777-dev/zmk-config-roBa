@@ -1,0 +1,5 @@
+/ {
+    key_physical_attrs: key_physical_attrs {
+        compatible = "zmk,key-physical-attrs";
+    };
+};
