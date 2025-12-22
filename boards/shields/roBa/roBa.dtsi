@@ -118,7 +118,7 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         label = "PMW3610";
-        zephyr,scale = <1.0>;
+        zephyr,scale = "1.0";
         status = "okay";
         // irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>; // 必要なら有効化
     };
