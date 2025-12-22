@@ -86,10 +86,12 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         diode-direction = "col2row";
-        row-gpios = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                  , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                  , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-                  , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            row-gpios
+                = <&xiao_d 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                , <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+                ;
     };
 
     left_encoder: encoder_left {
@@ -112,19 +114,15 @@
 
     trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
-        status = "okay";
+        status = "disabled";
     };
 };
 
 &spi0 {
-    status = "okay";
+    status = "disabled";
 
-    trackball: pmw3610@0 {
-        compatible = "pixart,pmw3610";
+    trackball: trackball@0 {
+        status = "disabled";
         reg = <0>;
-        label = "PMW3610";
-        zephyr,scale = "1.0";
-        status = "okay";
-        // irq-gpios = <&xiao_d 4 (GPIO_ACTIVE_LOW)>; // 必要なら有効化
     };
 };
