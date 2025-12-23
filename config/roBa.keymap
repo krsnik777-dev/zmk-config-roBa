@@ -6,11 +6,15 @@
 // スクロール量変更の定義を追記
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 
-&mt {
+mt_shift_z_300: mt_shift_z_300 {
+    compatible = "zmk,behavior-hold-tap";
+    label = "MT_SHIFT_Z_300";
+    #binding-cells = <2>;
     flavor = "balanced";
-    quick-tap-ms = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <300>;
+    bindings = <&kp Z &kp LEFT_SHIFT>;
 };
+
 
 &trackball {
     automouse-layer = <2>;
