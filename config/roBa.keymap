@@ -6,15 +6,11 @@
 // スクロール量変更の定義を追記
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 120
 
-mt_shift_z_300: mt_shift_z_300 {
-    compatible = "zmk,behavior-hold-tap";
-    label = "MT_SHIFT_Z_300";
-    #binding-cells = <2>;
+&mt {
     flavor = "balanced";
-    tapping-term-ms = <300>;
-    bindings = <&kp Z &kp LEFT_SHIFT>;
+    quick-tap-ms = <0>;
+    tapping-term-ms = <200>;
 };
-
 
 &trackball {
     automouse-layer = <2>;
@@ -37,63 +33,4 @@ mt_shift_z_300: mt_shift_z_300 {
 
         muhennkann {
             bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
-
-    macros {
-        to_layer_0: to_layer_0 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TO_LAYER_0";
-        };
-    };
-
-    behaviors {
-        // Zキー専用のMod-Tap（300ms）
-        mt_shift_z_300: mt_shift_z_300 {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_SHIFT_Z_300";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <300>;
-            bindings = <&kp Z>, <&kp LEFT_SHIFT>;
-        };
-
-        encoder_msc_down_up: encoder_msc_down_up {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "ENCODER_MSC_DOWN_UP";
-            #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-            tap-ms = <20>;
-        };
-    };
-
-    keymap {
-        compatible = "zmk,keymap";
-
-        default_layer {
-            bindings = <
-&kp Q             &kp W   &kp E    &kp R         &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S   &kp D    &kp F         &kp G        &kp LS(LG(S))       &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt_shift_z_300 Z &kp X   &kp C    &kp V         &kp B        &lt 4 LEFT_GUI      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 2 SLASH
-&kp TAB           &trans  &kp ESC  &kp LEFT_ALT  &lt 2 SPACE  &kp LCTRL           &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
-            >;
-
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        // 他のレイヤー（NUM, FUNCTION, MOUSE, winGUI）は省略
-    };
-};
+            key
