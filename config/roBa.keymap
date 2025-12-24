@@ -93,22 +93,13 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W   &kp E    &kp R         &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S   &kp D    &kp F         &kp G        &kp LS(LG(S))       &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
-&mt LEFT_SHIFT Z  &kp X   &kp C    &kp V         &kp B        &lt 4 LEFT_GUI      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
-&kp TAB           &trans  &kp ESC  &kp LEFT_ALT  &lt 3 SPACE  &kp LCTRL           &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp Q             &kp W      &kp E    &kp R         &kp T                                           &kp Y        &kp U  &kp I      &kp O    &kp P
+&kp A             &kp S      &kp D    &kp F         &kp G        &kp LS(LG(S))       &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SEMICOLON
+&mt LEFT_SHIFT Z  &kp X      &kp C    &kp V         &kp B        &lt 4 LEFT_GUI      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
+&kp TAB           &kp GRAVE  &kp ESC  &kp LEFT_ALT  &lt 3 SPACE  &kp LCTRL           &kp BACKSPACE  &lt 2 ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        NUM {
-            bindings = <
-&kp SEMI         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp UNDERSCORE                                               &kp DOLLAR        &kp QMARK      &kp EXCL      &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS     &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp MINUS     &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
-&kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MINUS    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp INT_YEN    &kp LS(INT1)  &kp LESS_THAN      &kp GT
-&trans           &trans        &trans        &trans        &trans          &trans                       &trans          &trans                                                            &kp GRAVE
-            >;
         };
 
         MOUSE {
@@ -117,6 +108,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &trans  &mkp MB2  &mkp MB3
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+            >;
+        };
+
+        NUM {
+            bindings = <
+&kp SEMI         &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp UNDERSCORE                                               &kp DOLLAR        &kp QMARK      &kp EXCL      &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS     &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp MINUS     &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
+&kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MINUS    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp INT_YEN    &kp LS(INT1)  &kp LESS_THAN      &kp GT
+&trans           &trans        &trans        &trans        &trans          &trans                       &trans          &trans                                                            &kp GRAVE
             >;
         };
 
