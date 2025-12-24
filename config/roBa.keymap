@@ -10,11 +10,11 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <250>;
 };
 
 &trackball {
-    automouse-layer = <2>;
+    automouse-layer = <1>;
     scroll-layers = <4>;
 
     // arrows {
