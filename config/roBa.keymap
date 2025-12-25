@@ -140,10 +140,10 @@
 
         molayer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                             &trans  &trans  &trans  &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LS(LG(S))  &trans  &trans  &trans  &trans                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans  &trans  &trans  &trans                  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans         &trans                                          &trans
             >;
         };
     };
