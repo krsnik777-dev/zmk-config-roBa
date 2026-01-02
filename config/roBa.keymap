@@ -131,11 +131,13 @@
 
         winGUI {
             bindings = <
-&kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LG(E)  &kp LG(R)  &trans                             &trans     &trans              &kp LG(I)           &trans               &trans
-&kp LG(A)               &kp LG(S)                &kp LG(D)  &trans     &trans  &trans      &kp LG(LS(S))  &trans     &trans              &kp LG(UP_ARROW)    &kp LG(L)            &trans
-&kp LG(Z)               &trans                   &trans     &kp LG(V)  &trans  &trans      &kp F24        &kp LG(N)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans
-&kp LG(TAB)             &trans                   &trans     &trans     &trans  &trans      &trans         &trans                                                                  &trans
+&kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LG(E)  &kp LG(R)  &trans                                 &trans     &trans              &kp LG(I)           &trans               &trans
+&kp LG(A)               &kp LG(S)                &kp LG(D)  &trans     &trans  &kp C_MUTE      &kp LG(LS(S))  &trans     &trans              &kp LG(UP_ARROW)    &kp LG(L)            &trans
+&kp LG(Z)               &trans                   &trans     &kp LG(V)  &trans  &trans          &kp F24        &kp LG(N)  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &trans
+&kp LG(TAB)             &trans                   &trans     &trans     &trans  &trans          &trans         &trans                                                                  &trans
             >;
+
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         molayer {
