@@ -5,12 +5,12 @@
 
 //スクロール量変更の定義を追記
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 120
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
 };
 
 &trackball {
