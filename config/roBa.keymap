@@ -23,10 +23,10 @@
         bindings =
             <&kp LA(RIGHT)>,    // 右
             <&kp LA(LEFT)>,     // 左
-            <&kp LC(TAB)>,      // 上
-            <&kp LC(LS(TAB))>;  // 下
+            <&kp LC(LS(TAB))>,  // 下
+            <&kp LC(TAB)>;      // 上
 
-        tick = <200>;
+        tick = <100>;
         wait-ms = <40>;
         tap-ms = <10>;
     };
