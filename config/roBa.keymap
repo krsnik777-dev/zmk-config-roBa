@@ -23,13 +23,15 @@
         layers = <4>;
         bindings =
             <&kp LA(RIGHT)>,
-            // 右,
+            // 右,,
             <&kp LA(LEFT)>,
-            // 左,
+            // 左,,
             <&kp LC(LS(TAB))>,
-            // 下,
+            // 下,,
             <&kp LC(TAB)>;
-      // 上
+
+        // 上
+
         tick = <100>;
         wait-ms = <40>;
         tap-ms = <10>;
@@ -124,7 +126,7 @@
 &kp Q           &kp W    &kp E    &kp R         &kp T                                                &kp Y             &kp U  &kp I      &kp O    &kp P
 &kp A           &kp S    &kp D    &kp F         &kp G        &kp N0                   &kp APOS       &kp H             &kp J  &kp K      &kp L    &kp SEMICOLON
 &kp Z           &kp X    &kp C    &kp V         &kp B        &lt_fast 4 LEFT_GUI      &mo 5          &kp N             &kp M  &kp COMMA  &kp DOT  &lt 3 SLASH
-&kp LEFT_SHIFT  &kp TAB  &kp ESC  &kp LEFT_ALT  &lt 3 SPACE  &kp LCTRL                &kp BACKSPACE  &lt_fast 2 ENTER                             &kp DEL
+&kp LEFT_SHIFT  &kp DEL  &kp TAB  &kp LEFT_ALT  &lt 3 SPACE  &kp LCTRL                &kp BACKSPACE  &lt_fast 2 ENTER                             &kp ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -144,16 +146,16 @@
 &kp KP_SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp UNDERSCORE                                                 &kp DOLLAR        &kp QMARK      &kp EXCL      &kp RIGHT_BRACKET  &kp BACKSLASH
 &kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp KP_PLUS     &kp LC(LA(KP_NUMBER_0))      &kp LS(NUMBER_2)  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp MINUS     &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
 &kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_MINUS    &kp EQUAL                    &kp HASH          &kp LEFT_BRACKET  &kp INT_YEN    &kp LS(INT1)  &kp LESS_THAN      &kp GT
-&trans           &trans        &trans        &trans        &trans          &trans                       &trans            &trans                                                            &kp LS(NUMBER_7)
+&kp PERCENT      &trans        &trans        &trans        &trans          &trans                       &trans            &trans                                                            &kp LS(NUMBER_7)
             >;
         };
 
         FUNCTION {
             bindings = <
-&kp F1   &kp F2          &kp F3          &kp F4           &kp F5                               &kp F6         &kp F7          &kp F8          &kp F9           &kp F10
-&kp ESC  &trans          &kp UP_ARROW    &kp ENTER        &kp DEL        &trans      &kp HOME  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB3
-&trans   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &kp END   &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F11
-&trans   &trans          &trans          &trans           &trans         &trans      &trans    &trans                                                          &kp F12
+&kp F1          &kp F2          &kp F3          &kp F4           &kp F5                               &kp F6         &kp F7          &kp F8          &kp F9           &kp F10
+&kp ESC         &trans          &kp UP_ARROW    &kp ENTER        &kp DEL        &trans      &kp HOME  &kp PAGE_UP    &mkp MB1        &kp UP_ARROW    &mkp MB2         &mkp MB3
+&trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp BACKSPACE  &trans      &kp END   &kp PAGE_DOWN  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F11
+&kp LEFT_SHIFT  &trans          &trans          &trans           &trans         &trans      &trans    &trans                                                          &kp F12
             >;
         };
 
