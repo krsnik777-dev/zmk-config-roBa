@@ -23,11 +23,11 @@
         layers = <4>;
         bindings =
             <&kp LA(RIGHT)>,
-            // 右,,,,
+            // 右,,,,,
             <&kp LA(LEFT)>,
-            // 左,,,,
+            // 左,,,,,
             <&kp LC(LS(TAB))>,
-            // 下,,,,
+            // 下,,,,,
             <&kp LC(TAB)>;
 
         // 上
@@ -143,10 +143,10 @@
 
         NUM {
             bindings = <
-&kp KP_SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9    &kp UNDERSCORE                                                 &kp DOLLAR        &kp QMARK      &kp EXCL      &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6    &kp KP_PLUS     &kp LC(LA(KP_NUMBER_0))      &kp LS(NUMBER_2)  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp MINUS     &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
-&kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3    &kp KP_MINUS    &kp EQUAL                    &kp HASH          &kp LEFT_BRACKET  &kp INT_YEN    &kp LS(INT1)  &kp LESS_THAN      &kp GT
-&kp PERCENT      &trans        &trans        &kp LEFT_BRACE  &trans          &kp RIGHT_BRACE              &trans            &trans                                                            &kp LS(NUMBER_7)
+&kp KP_SLASH     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     &kp UNDERSCORE                                                 &kp DOLLAR        &kp QMARK      &kp EXCL      &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp NUMBER_0     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6     &kp KP_PLUS     &kp LC(LA(KP_NUMBER_0))      &kp LS(NUMBER_2)  &kp LS(NUMBER_6)  &kp LS(EQUAL)  &kp MINUS     &kp LS(NUMBER_8)   &kp LS(NUMBER_9)
+&kp KP_ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3     &kp KP_MINUS    &kp EQUAL                    &kp HASH          &kp LEFT_BRACKET  &kp INT_YEN    &kp LS(INT1)  &kp LESS_THAN      &kp GT
+&kp PERCENT      &trans        &trans        &kp RIGHT_BRACE  &trans          &kp LS(BACKSLASH)            &trans            &trans                                                            &kp LS(NUMBER_7)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(Z) LC(LS(Z))>;
