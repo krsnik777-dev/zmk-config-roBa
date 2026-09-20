@@ -23,11 +23,11 @@
         layers = <4>;
         bindings =
             <&kp LA(RIGHT)>,
-            // 右,,,,,,,,
+            // 右,,,,,,,,,
             <&kp LA(LEFT)>,
-            // 左,,,,,,,,
+            // 左,,,,,,,,,
             <&kp LC(LS(TAB))>,
-            // 下,,,,,,,,
+            // 下,,,,,,,,,
             <&kp LC(TAB)>;
 
         // 上
@@ -164,8 +164,8 @@
         winGUI {
             bindings = <
 &kp LG(LS(LEFT_ARROW))  &kp LG(LS(RIGHT_ARROW))  &kp LG(E)    &kp LG(R)  &trans                                          &trans              &trans               &kp LG(I)           &kp LG(LC(LEFT_ARROW))  &kp LG(LC(RIGHT_ARROW))
-&kp LG(A)               &kp LG(LS(S))            &kp LG(D)    &trans     &kp LC(TAB)      &kp C_MUTE      &kp LG(LS(S))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp LG(UP_ARROW)    &kp LG(L)               &trans
-&kp LG(Z)               &trans                   &trans       &kp LG(V)  &kp LC(LS(TAB))  &trans          &kp F24        &kp LG(N)           &kp LG(LEFT_ARROW)   &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)     &kp LG(LA(PRINTSCREEN))
+&kp LG(A)               &kp LG(LS(S))            &kp LG(D)    &trans     &kp RC(RS(TAB))  &kp C_MUTE      &kp LG(LS(S))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp LG(UP_ARROW)    &kp LG(L)               &trans
+&kp LG(Z)               &trans                   &trans       &kp LG(V)  &kp RC(TAB)      &trans          &kp F24        &kp LG(N)           &kp LG(LEFT_ARROW)   &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)     &kp LG(LA(PRINTSCREEN))
 &trans                  &trans                   &kp LG(TAB)  &trans     &trans           &trans          &trans         &trans                                                                               &kp LA(PRINTSCREEN)
             >;
 
